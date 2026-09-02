@@ -26,6 +26,7 @@ export const App: React.FC = () => {
 
     getTodos().then((todosData: Todo[]) => {
       setTodos(todosData);
+      setFilteredTodos(todosData);
       setIsLoading(false);
     });
   }, []);
