@@ -60,6 +60,7 @@ export const TodoFilter: React.FC<TodoFilterProps> = ({
               type="button"
               className="delete"
               onClick={() => {
+                debouncedSearch.cancel();
                 setSearchTerm('');
                 onSearch('');
               }}
